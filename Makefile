@@ -15,7 +15,7 @@ endif
 
 # COMMON CONFIGURATION #
 
-NAME := FBI
+NAME := CTRM
 
 BUILD_DIR := build
 OUTPUT_DIR := output
@@ -30,19 +30,17 @@ LIBRARIES := citro3d ctru m
 BUILD_FLAGS :=
 RUN_FLAGS :=
 
-VERSION_PARTS := $(subst ., ,$(shell git describe --tags --abbrev=0))
-
-VERSION_MAJOR := $(word 1, $(VERSION_PARTS))
-VERSION_MINOR := $(word 2, $(VERSION_PARTS))
-VERSION_MICRO := $(word 3, $(VERSION_PARTS))
+VERSION_MAJOR := 1
+VERSION_MINOR := 0
+VERSION_MICRO := 0
 
 # 3DS CONFIGURATION #
 
 TITLE := $(NAME)
-DESCRIPTION := Open source CIA installer.
-AUTHOR := Steveice10
-PRODUCT_CODE := CTR-P-CFBI
-UNIQUE_ID := 0xF8001
+DESCRIPTION := Open source file manager.
+AUTHOR := leo60228
+PRODUCT_CODE := CTR-P-CTRM
+UNIQUE_ID := 0xF8056
 
 SYSTEM_MODE := 64MB
 SYSTEM_MODE_EXT := Legacy
@@ -51,7 +49,7 @@ ICON_FLAGS := --flags visible,ratingrequired,recordusage --cero 153 --esrb 153 -
 
 ROMFS_DIR := romfs
 BANNER_AUDIO := meta/audio.wav
-BANNER_IMAGE := meta/banner.cgfx
+BANNER_IMAGE := meta/banner.png
 ICON := meta/icon.png
 
 # INTERNAL #
