@@ -32,13 +32,6 @@ static void mainmenu_draw_top(ui_view* view, void* data, float x1, float y1, flo
 }
 
 static void mainmenu_update(ui_view* view, void* data, linked_list* items, list_item* selected, bool selectedTouched) {
-    if(hidKeysDown() & KEY_START) {
-        ui_pop();
-        list_destroy(view);
-
-        return;
-    }
-
     if(selected != NULL && (selectedTouched || hidKeysDown() & KEY_A) && selected->data != NULL) {
         ((void(*)()) selected->data)();
         return;

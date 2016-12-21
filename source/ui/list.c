@@ -7,6 +7,9 @@
 #include "ui.h"
 #include "../core/screen.h"
 #include "../core/linkedlist.h"
+#include "../core/util.h"
+
+extern void cleanup();
 
 typedef struct {
     void* data;
@@ -86,6 +89,14 @@ static void list_validate(list_data* listData, float by1, float by2) {
 }
 
 static void list_update(ui_view* view, void* data, float bx1, float by1, float bx2, float by2) {
+    if(hidKeysDown() & KEY_START) {
+      ui_pop();
+      list_destroy(view);
+      cleanup();
+
+      return;
+    }
+
     list_data* listData = (list_data*) data;
 
     u32 size = linked_list_size(&listData->items);
