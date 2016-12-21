@@ -1,8 +1,6 @@
-# FBI
+# CTRM
 
-FBI is an open source title manager for the 3DS.
-
-Download: https://github.com/Steveice10/FBI/releases
+CTRM is an open source file manager for the 3DS.
 
 Requires [devkitARM](http://sourceforge.net/projects/devkitpro/files/devkitARM/) and [citro3d](https://github.com/fincs/citro3d) to build.
 
@@ -13,3 +11,5 @@ Banner: [OctopusRift](http://gbatemp.net/members/octopusrift.356526/), [Apache T
 SPI Protocol Information: [TuxSH](https://github.com/TuxSH/) ([TWLSaveTool](https://github.com/TuxSH/TWLSaveTool))
 
 svchax: [aliaspider](https://github.com/aliaspider), waithax: [Mrrraou](https://github.com/Mrrraou)
+
+FBI: [Steveice10](https://github.com/Steveice10)
