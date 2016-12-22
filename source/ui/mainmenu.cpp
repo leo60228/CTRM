@@ -110,6 +110,8 @@ static void mainmenu_update(ui_view* view, void* data, linked_list* items, list_
                 plugin_entry.color = COLOR_TEXT;
                 plugin_entry.data = (void*)i;
 
+                log << plugin_entry.name << "\n";
+
                 linked_list_add(items, &plugin_entry);
 
                 pluginids.push_back(strtoull(plugininfo[0].c_str(), NULL, 10));
