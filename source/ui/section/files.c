@@ -424,22 +424,6 @@ void files_open(FS_ArchiveID archiveId, FS_Path archivePath) {
     list_display("Files", "A: Select, B: Back, X: Refresh, Select: Options", data, files_update, files_draw_top);
 }
 
-void files_open_sd() {
+void files_open_pluginfs() {
     files_open(ARCHIVE_SDMC, fsMakePath(PATH_EMPTY, ""));
-}
-
-void files_open_ctr_nand() {
-    files_open(ARCHIVE_NAND_CTR_FS, fsMakePath(PATH_EMPTY, ""));
-}
-
-void files_open_twl_nand() {
-    files_open(ARCHIVE_NAND_TWL_FS, fsMakePath(PATH_EMPTY, ""));
-}
-
-void files_open_twl_photo() {
-    files_open(ARCHIVE_TWL_PHOTO, fsMakePath(PATH_EMPTY, ""));
-}
-
-void files_open_twl_sound() {
-    files_open(ARCHIVE_TWL_SOUND, fsMakePath(PATH_EMPTY, ""));
 }
