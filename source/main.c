@@ -139,7 +139,7 @@ int main(int argc, const char* argv[]) {
     init();
 
     mainmenu_open();
-    while(aptMainLoop() && ui_update());
+    while(ui_update());
 
     cleanup();
 
