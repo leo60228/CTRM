@@ -143,10 +143,6 @@ static void mainmenu_update(ui_view* view, void* data, linked_list* items, list_
             
             char* line = strtok(varcfile, "\n");
             
-            std::ofstream log("logfile.txt", std::ios_base::app | std::ios_base::out);
-
-            log << pluginids[0] << "\n";
-
             while (line != NULL) {
                 std::string stdline = line;
                 
@@ -169,8 +165,6 @@ static void mainmenu_update(ui_view* view, void* data, linked_list* items, list_
                 uint64_t currenttitle = (uint64_t)strtoull(titleid, NULL, 16);
                 uint64_t pluginid = (thistitle == currenttitle) ? 0 : currenttitle;
                 
-                log << pluginid << "\n";
-
                 pluginids.push_back(pluginid);
 
                 i++;
